@@ -43,10 +43,10 @@ export default function SideBar(props) {
 
   return (
     <div
-      className={` xs:w-4/5 flex min-h-screen w-fit bg-primary px-4 sm:w-3/5 lg:w-full font-Roboto
+      className={`xs:w-4/5 flex min-h-screen w-fit bg-primary px-3 sm:w-3/5 lg:w-4/5 font-Roboto
         `}
     >
-      <div className="mt-5">
+      <div className="mt-6 fixed">
         <div className="flex items-center justify-between ml-5">
           <Link to="/">
             <div className="flex items-center gap-3">

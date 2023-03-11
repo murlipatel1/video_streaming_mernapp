@@ -45,7 +45,7 @@ router.post(
 
 router.put("/updatevideo/:id", fetchuser, async (req, res) => {
   try {
-    const { title, description } = req.body;
+    const { title, description,link } = req.body;
     const newVideo = {};
     if (title) {
       newVideo.title = title;
@@ -87,11 +87,57 @@ router.delete("/deletevideo/:id", fetchuser, async (req, res) => {
       return res.status(401).send("Not Allowed");
     }
     video = await Video.findOneAndDelete(req.params.id);
-    res.json({ Success: "deleted succesfully", note: note });
+    res.json({ Success: "deleted succesfully", video: video });
   } catch (error) {
     console.error(error);
     res.status(500).send("Internal Server Error");
   }
 });
+
+// export const like = async (req, res, next) => {
+//   const id = req.user.id;
+//   const videoId = req.params.videoId;
+//   try {
+//     await Video.findByIdAndUpdate(videoId,{
+//       $addToSet:{likes:id},
+//       $pull:{dislikes:id}
+//     })
+//     res.status(200).json("The video has been liked.")
+//   } catch (err) {
+//     next(err);
+//   }
+// };
+
+// export const addComment = async (req, res, next) => {
+//   const newComment = new Comment({ ...req.body, userId: req.user.id });
+//   try {
+//     const savedComment = await newComment.save();
+//     res.status(200).send(savedComment);
+//   } catch (err) {
+//     next(err);
+//   }
+// };
+
+router.post("/comment/:id", fetchuser, async (req, res,next) => {
+  const newComment = new Video({ ...req.body, user: req.user.id });
+  try {
+    const savedComment = await newComment.save();
+    res.status(200).send(savedComment);
+  } catch (err) {
+    next(err);
+  }
+})
+
+router.put("/like/:id", fetchuser, async (req, res,next) => {
+  const id = req.user.id;
+  try {
+        await Video.findByIdAndUpdate(id,{
+          $addToSet:{like:id},
+        })
+        res.status(200).json("The video has been liked.")
+      } catch (err) {
+        next(err);
+      }
+})
 
 module.exports = router;

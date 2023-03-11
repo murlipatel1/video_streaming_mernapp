@@ -1,6 +1,7 @@
 import React, {useEffect} from "react"
 import SideBar from "../components/SideBar"
 import axios from "axios"
+import Card from "../components/Card"
 
 const Overview = () => {
   // useEffect(() => {
@@ -15,15 +16,20 @@ const Overview = () => {
   //       console.log(err)
   //     })
   // }, [])
+  let notes=[1,2,3]
 
   return (
     <div className="font-Roboto">
       <div className=" lg:grid lg:grid-cols-summary xl:grid-cols-sidebarSetGrid">
         <SideBar active="overview" />
-        <div className="mt-4 px-5">
-          <div className="mt-5 ml-5">
-            <h2 className="text-4xl font-medium ">Overview</h2>
-          </div>
+
+        <div className="mt-8">
+        {notes.map((note) => {
+          return (
+            <Card key={note._id} note={note} />
+          );
+        })}
+          <Card /> 
         </div>
       </div>
     </div>
