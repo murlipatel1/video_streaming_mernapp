@@ -19,7 +19,6 @@ const SignUp = () => {
     });
     const json = await response.json()
     console.log(json)
-    
       // redirect
       localStorage.setItem('token',json.authToken)
       history("/login")

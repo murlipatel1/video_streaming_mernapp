@@ -94,30 +94,6 @@ router.delete("/deletevideo/:id", fetchuser, async (req, res) => {
   }
 });
 
-// export const like = async (req, res, next) => {
-//   const id = req.user.id;
-//   const videoId = req.params.videoId;
-//   try {
-//     await Video.findByIdAndUpdate(videoId,{
-//       $addToSet:{likes:id},
-//       $pull:{dislikes:id}
-//     })
-//     res.status(200).json("The video has been liked.")
-//   } catch (err) {
-//     next(err);
-//   }
-// };
-
-// export const addComment = async (req, res, next) => {
-//   const newComment = new Comment({ ...req.body, userId: req.user.id });
-//   try {
-//     const savedComment = await newComment.save();
-//     res.status(200).send(savedComment);
-//   } catch (err) {
-//     next(err);
-//   }
-// };
-
 router.post("/comment/:id", fetchuser, async (req, res,next) => {
   const newComment = new Video({ ...req.body, user: req.user.id });
   try {

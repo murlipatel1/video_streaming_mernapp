@@ -1,4 +1,5 @@
-import React, {useEffect} from "react"
+import React, { useContext,useState, useRef, useEffect } from "react";
+import noteContext from "../context/notes/noteContext";
 import SideBar from "../components/SideBar"
 import axios from "axios"
 import Card from "../components/Card"
@@ -16,20 +17,24 @@ const Overview = () => {
   //       console.log(err)
   //     })
   // }, [])
-  let notes=[1,2,3]
+  const context = useContext(noteContext);
+  const { video, getNotes,editNote } = context;
+
+  useEffect(() => {
+    // eslint-disable-next-line
+    getNotes();
+  }, []);
 
   return (
     <div className="font-Roboto">
       <div className=" lg:grid lg:grid-cols-summary xl:grid-cols-sidebarSetGrid">
         <SideBar active="overview" />
-
         <div className="mt-8">
-        {notes.map((note) => {
+        {video.map((videos) => {
           return (
-            <Card key={note._id} note={note} />
+            <Card key={videos._id} videos={videos} />
           );
         })}
-          <Card /> 
         </div>
       </div>
     </div>

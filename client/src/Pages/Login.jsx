@@ -20,9 +20,8 @@ const Login = () => {
     const json = await response.json()
     console.log(json)
     if(json.success){
-    
     // redirect
-    localStorage.setItem('token',json.authToken)
+    localStorage.setItem('token',json.success)
     navigate("/overview")
     }else{
       alert("Invalid Type")

@@ -1,8 +1,10 @@
-import React from 'react'
 import doggie from '../Videos/Doggie.mp4'
 import {Icon} from "@iconify/react"
+import React, { useContext, useState } from "react";
+import noteContext from "../context/notes/noteContext";
 
-const Card = () => {
+const Card = (props) => {
+  const {videos} =props
   const [showModal, setShowModal] = React.useState(false);
   return (
     <>
@@ -15,7 +17,7 @@ const Card = () => {
       <div className="p-6">
         <h5
           className="mb-2 text-xl font-semibold leading-tight text-neutral-800">
-          Card title
+          {videos.title}
         </h5>
         <Icon icon="ant-design:like-outlined" color="black" className="cursor-pointer text-3xl" />
          {/* ant-design:like-filled */}
