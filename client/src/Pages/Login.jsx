@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom"
 import Navbar from "./Navbar"
+import logo from "../images/logo.png"
 
 const Login = () => {
   let navigate = useNavigate()
@@ -44,8 +45,8 @@ const Login = () => {
                     <div className="md:mx-6 md:p-12">
                       <div className="text-center">
                         <img
-                          className="mx-auto w-16"
-                          src="./images/logo.png"
+                          className="mx-auto w-16 h-16 rounded-full"
+                          src={logo}
                           alt="logo"
                         />
                         <h4 className="mt-1 mb-12 pb-1 text-xl font-semibold">

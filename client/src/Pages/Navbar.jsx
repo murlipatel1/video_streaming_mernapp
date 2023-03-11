@@ -11,7 +11,7 @@ export default function Navbar() {
           <Link to={"/"}>
             <div className="flex items-center gap-3 text-2xl font-bold lg:text-4xl">
               <img  src={logo} className="h-10 rounded-full w-10" alt="logo" />
-              <h1 className="text-black">StockHive</h1>
+              <h1 className="text-black">App</h1>
             </div>
           </Link>
         </div>

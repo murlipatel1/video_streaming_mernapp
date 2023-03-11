@@ -3,18 +3,6 @@ import SideBar from "../components/SideBar"
 import axios from "axios"
 
 const Performance = () => {
-  // useEffect(() => {
-  //   axios
-  //     .get("http://localhost:5000/api/get/getquote", {
-  //       company: "AAPL",
-  //     })
-  //     .then((res) => {
-  //       // console.log(res.data)
-  //     })
-  //     .catch((err) => {
-  //       console.log(err)
-  //     })
-  // }, [])
 
   return (
     <div className="font-Roboto">
