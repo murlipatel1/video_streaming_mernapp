@@ -79,9 +79,31 @@ const NoteState = (props) => {
     setVideo(newNote);
   };
 
+  const likeNotes= async(id,like)=>{
+    const response = await fetch(`${host}/api/video/updatevideo/${id}`, {
+      method: "PUT",
+      headers: {
+        "Content-Type": "application/json",
+        "auth-token":
+        localStorage.getItem('token'),
+      },
+      body: JSON.stringify({ like }),
+    });
+    const json = await response.json();
+    let newNote = JSON.parse(JSON.stringify(video));
+    for (let index = 0; index < newNote.length; index++) {
+      const element = newNote[index];
+      if (element._id === id) {
+        newNote[index].like = like;
+        break;
+      }
+    }
+    setVideo(newNote);
+  }
+
   return (
     <noteContext.Provider
-      value={{ video, addNote, deleteNote, editNote, getNotes }}
+      value={{ video, addNote, deleteNote, editNote, getNotes,likeNotes }}
     >
       {props.children}
     </noteContext.Provider>

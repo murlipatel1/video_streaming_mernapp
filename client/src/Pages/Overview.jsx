@@ -5,23 +5,12 @@ import axios from "axios"
 import Card from "../components/Card"
 
 const Overview = () => {
-  // useEffect(() => {
-  //   axios
-  //     .get("http://localhost:5000/api/get/getquote", {
-  //       company: "AAPL",
-  //     })
-  //     .then((res) => {
-  //       // console.log(res.data)
-  //     })
-  //     .catch((err) => {
-  //       console.log(err)
-  //     })
-  // }, [])
+
   const context = useContext(noteContext);
-  const { video, getNotes,editNote } = context;
+  const { video, getNotes,likeNotes } = context;
 
   useEffect(() => {
-    // eslint-disable-next-line
+    
     getNotes();
   }, []);
 

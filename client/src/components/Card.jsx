@@ -6,6 +6,17 @@ import noteContext from "../context/notes/noteContext";
 const Card = (props) => {
   const {videos} =props
   const [showModal, setShowModal] = React.useState(false);
+  const [message, setMessage] = useState('');
+  const length = videos.like.length
+  const [updated, setUpdated] = useState(message);
+  const handleChange = (event) => {
+    setMessage(event.target.value);
+  };
+
+  const handleClick = () => {
+    
+    setUpdated(message);
+  };
   return (
     <>
     <div className="inline-block mr-4 mb-4 ">
@@ -20,10 +31,10 @@ const Card = (props) => {
           {videos.title}
         </h5>
         <Icon icon="ant-design:like-outlined" color="black" className="cursor-pointer text-3xl" />
+        {length}
          {/* ant-design:like-filled */}
         <p className="mb-4 text-base text-neutral-600 ">
-          Some quick example text to build on the card title and make up the
-          bulk of the card's content.
+          {videos.description}
         </p>
         <button
           type="button"
@@ -45,7 +56,7 @@ const Card = (props) => {
                 {/*header*/}
                 <div className="flex items-start justify-between p-5 border-b border-solid border-slate-200 rounded-t">
                   <h3 className="text-3xl font-semibold">
-                    Modal Title
+                    Comments
                   </h3>
                   <button
                     className="p-1 ml-auto bg-transparent border-0 text-black opacity-5 float-right text-3xl leading-none font-semibold outline-none focus:outline-none"
@@ -58,6 +69,21 @@ const Card = (props) => {
                 </div>
                 {/*body*/}
                 <div className="relative p-6 flex-auto">
+                  <input type="text" className='border-black' name="message"
+        onChange={handleChange}
+        value={message}/>
+                  <button
+                    className="bg-emerald-500 text-white active:bg-emerald-600 font-bold uppercase text-sm px-6 py-3 mx-4 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+                    type="button"
+                    onClick={handleClick}
+                  >
+                    Insert
+                  </button>
+
+                  <p className="my-4 text-slate-500 text-lg leading-relaxed">
+                    I always felt like I could do anything. 
+                  </p>
+                  <hr />
                   <p className="my-4 text-slate-500 text-lg leading-relaxed">
                     I always felt like I could do anything. That’s the main
                     thing people are controlled by! Thoughts- their perception
@@ -65,6 +91,8 @@ const Card = (props) => {
                     themselves. If you're taught you can’t do anything, you
                     won’t do anything. I was taught I could do everything.
                   </p>
+                  <hr />
+                  <p className="my-4 text-slate-500 text-lg leading-relaxed">{updated}</p>
                 </div>
                 {/*footer*/}
                 <div className="flex items-center justify-end p-6 border-t border-solid border-slate-200 rounded-b">
