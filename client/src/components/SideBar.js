@@ -1,27 +1,28 @@
 import {Icon} from "@iconify/react"
 import React from "react"
 import {Link, useNavigate} from "react-router-dom"
+import logo from "../images/logo.png"
 
 export default function SideBar(props) {
   const navigate = useNavigate()
 
-//   const handleLogout = () => {
-//     localStorage.removeItem("superAdminToken")
-//     navigate("/adminLogin")
-//   }
+  const handleLogout = () => {
+    localStorage.removeItem("auth-token")
+    navigate("/")
+  }
 
   const sidebarItems = [
     {
-      name: "Overview",
-      icon: "mdi:analytics",
+      name: "Videos",
+      icon: "bxs:videos",
       link: "/overview",
       active: "overview",
     },
     {
-      name: "Buy Stocks",
-      icon: "fluent:money-hand-24-filled",
-      link: "/buystock",
-      active: "buystock",
+      name: "Your Performance",
+      icon: "mdi:performance",
+      link: "/yourperformance",
+      active: "yourperformance",
     },
     
   ]
@@ -50,12 +51,12 @@ export default function SideBar(props) {
           <Link to="/">
             <div className="flex items-center gap-3">
               <img
-                src="../images/logo.png"
+                src={logo}
                 alt="Logo"
-                className="w-16"
+                className="w-16 h-16 rounded-full "
               />
-              <h1 className="text-3xl font-bold">
-                StockHive
+              <h1 className=" ml-3 text-3xl font-bold">
+                App
               </h1>
             </div>
           </Link>
@@ -66,7 +67,7 @@ export default function SideBar(props) {
         <div className="mt-4 px-3">
           <button
             className="w-3/5 rounded bg-secondary px-5 py-1 text-2xl font-medium text-white lg:w-4/5"
-            // onClick={handleLogout}
+            onClick={handleLogout}
           >
             Log Out
           </button>

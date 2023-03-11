@@ -18,7 +18,9 @@ export const HomePage = () => {
           path="/"
           element={ */}
             <div className="overflow-hidden bg-primary font-Roboto">
+              <div className="fixed w-full z-50">
               <Navbar />
+              </div>
               <Main />       
             </div>
           {/* }

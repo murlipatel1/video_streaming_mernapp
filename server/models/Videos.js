@@ -6,8 +6,12 @@ const VideoSchema = new Schema({
         ref:'user'
     },
     title:{
-        type: String ,
+        type: String,
         required : true
+    },
+    link:{
+        type :String,
+        required:true
     },
     description:{
         type: String 

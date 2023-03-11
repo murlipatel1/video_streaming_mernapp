@@ -9,7 +9,7 @@ connectToMongo();
 app.use(express.json())
 app.use(cors())
 app.use("/api/auth",require("./routes/auth"))
-// app.use("/api/stocks",require("./routes/stockOps"))
+app.use("/api/video",require("./routes/video"))
 
 app.get("/", (req, res) => {
     res.send("Testing!")
