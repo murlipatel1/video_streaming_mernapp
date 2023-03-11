@@ -6,8 +6,14 @@
 ## How we can implement the following MERN stack App
 
 In the project directory, you can run:
+## install required pacakages by using command in both folder client and server
+### `npm install`
 
-### `npm start`
+## To run the React App
+### `npm run start`
+
+## To run server for same 
+### `nodemon index.js`
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
