@@ -1,4 +1,4 @@
-# CiperSchool Assignmet
+# CiperSchool Assignment
 
 ## The MERN stack implemented app include basic functionalities
 
