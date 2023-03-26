@@ -24,6 +24,12 @@ export default function SideBar(props) {
       link: "/yourperformance",
       active: "yourperformance",
     },
+    {
+      name: "Users",
+      icon: "mdi:users-group-outline",
+      link: "/users",
+      active: "users",
+    },
     
   ]
 

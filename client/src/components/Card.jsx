@@ -69,7 +69,7 @@ const Card = (props) => {
                 </div>
                 {/*body*/}
                 <div className="relative p-6 flex-auto">
-                  <input type="text" className='border-black' name="message"
+                  <input type="text" name="message" placeholder='Write a comment'
         onChange={handleChange}
         value={message}/>
                   <button

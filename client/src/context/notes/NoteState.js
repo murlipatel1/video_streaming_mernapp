@@ -13,7 +13,6 @@ const NoteState = (props) => {
       headers: {
         "Content-Type": "application/json",
         "auth-token": localStorage.getItem('token'),
-        // "auth-token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjQwYzBjY2M4ZWUwYjIzOTA2Nzc3ZDZkIn0sImlhdCI6MTY3ODUxMTMwOH0.uBRL3YjB0rNfK-akQuuubdUH7h_H9zQcd630Jiv3cxk",
       },
     }); 
     const json = await response.json();

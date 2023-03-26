@@ -6,6 +6,7 @@ import { HomePage } from './Pages/HomePage';
 import {Route, Routes} from "react-router-dom"
 import Performance from './Pages/Performance';
 import NoteState from './context/notes/NoteState';
+import Users from './Pages/Users';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route exact path="/overview" element={<Overview/> } />
         <Route exact path="/login" element={<Login />} />
         <Route exact path="/signup" element={<SignUp />} />
+        <Route exact path="/users" element={<Users />} />
       </Routes>
       </NoteState>
     </>

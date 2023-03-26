@@ -9,7 +9,15 @@ require('dotenv').config()
 const JWT_SECRET = "thisIsJustACheck";
 
 let success = true
-
+router.get("/alluser",async(req,res)=>{
+    try {
+        const users = await User.find();
+        res.json(users);
+      } catch (err) {
+        console.error(err);
+        res.status(500).json({ message: 'Server error' });
+      }
+})
 
 //During Sign Up of User
 router.post("/createuser", 
