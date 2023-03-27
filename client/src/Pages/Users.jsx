@@ -32,7 +32,7 @@ const Users = () => {
         <SideBar active="users" />
         <div className="mt-4 px-5">
           <div className="mt-5 ml-5">
-            <h2 className="text-4xl font-medium ">Users</h2>
+            <h2 className="text-4xl font-medium ">Creators</h2>
           </div>
           <div className='flex flex-wrap'>
 
