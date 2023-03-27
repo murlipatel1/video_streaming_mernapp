@@ -51,5 +51,9 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 ## You can now follow your own creators
 ![image](https://user-images.githubusercontent.com/100035961/227815296-b4594e9a-c5ac-4d71-b516-259a8aaa487b.png)
 
+## Profile Page
+![image](https://user-images.githubusercontent.com/100035961/227987369-e9ffb992-4377-472b-9a8e-ba757a5369f0.png)
+
+![image](https://user-images.githubusercontent.com/100035961/227987468-9c189497-dd86-4389-bc18-5f15474c28c6.png)
 
 # Thanking you for your time to see my project.
