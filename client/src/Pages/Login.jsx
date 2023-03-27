@@ -9,7 +9,7 @@ const Login = () => {
   const host = "http://localhost:5000"
   const [credentials, setCredentials] = useState({ email: "", password: "" });
   const handleSubmit = async (e) => {
-    console.log("Clicked")
+    // console.log("Clicked")
     e.preventDefault();
     const response = await fetch(`${host}/api/auth/login`, {
       method: "POST",

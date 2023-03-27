@@ -3,7 +3,7 @@ import ProfileCard from '../components/ProfileCard'
 // import ProfileCard2 from '../components/ProfileCard2'
 import SideBar from '../components/SideBar'
 
-const Users = () => {
+const Creators = () => {
   const host = "http://localhost:5000";
   const videoInitial = [];
 
@@ -29,7 +29,7 @@ const Users = () => {
   return (
     <div className="font-Roboto">
       <div className=" lg:grid lg:grid-cols-summary xl:grid-cols-sidebarSetGrid">
-        <SideBar active="users" />
+        <SideBar active="creators" />
         <div className="mt-4 px-5">
           <div className="mt-5 ml-5">
             <h2 className="text-4xl font-medium ">Creators</h2>
@@ -51,4 +51,4 @@ const Users = () => {
   )
 }
 
-export default Users
+export default Creators

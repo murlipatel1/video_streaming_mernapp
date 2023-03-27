@@ -27,9 +27,15 @@ export default function SideBar(props) {
     {
       name: "Creators",
       icon: "mdi:users-group-outline",
-      link: "/users",
-      active: "users",
+      link: "/creators",
+      active: "creators",
     },
+    {
+      name: "Profile",
+      icon: "mdi:users-group-outline",
+      link: "/profile",
+      active: "profile",
+    }
     
   ]
 
