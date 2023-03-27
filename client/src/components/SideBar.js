@@ -32,7 +32,7 @@ export default function SideBar(props) {
     },
     {
       name: "Profile",
-      icon: "mdi:users-group-outline",
+      icon: "gg:profile",
       link: "/profile",
       active: "profile",
     }
