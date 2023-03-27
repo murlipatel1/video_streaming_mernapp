@@ -49,4 +49,4 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 ![Screenshot 2023-03-11 180156](https://user-images.githubusercontent.com/100035961/224484777-62bf57bc-a1a1-465c-91a9-3baede8115ce.png)
 
 
-# THanking you for your time to see my project.
+# Thanking you for your time to see my project.
