@@ -32,6 +32,7 @@ Your app is ready to be deployed!
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
 
+# FrontEnd Part
 
 ## Home Page
 ![Screenshot 2023-03-11 175819](https://user-images.githubusercontent.com/100035961/224484749-a1c78549-4d59-4748-b684-795098df7f3c.png)
@@ -51,5 +52,16 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 ## You can now follow your own creators
 ![image](https://user-images.githubusercontent.com/100035961/227815296-b4594e9a-c5ac-4d71-b516-259a8aaa487b.png)
 
+## Profile Page
+![image](https://user-images.githubusercontent.com/100035961/227987369-e9ffb992-4377-472b-9a8e-ba757a5369f0.png)
+
+![image](https://user-images.githubusercontent.com/100035961/227987468-9c189497-dd86-4389-bc18-5f15474c28c6.png)
+
+# BackEnd Part
+## index.js file
+![image](https://user-images.githubusercontent.com/100035961/227988423-e731f3ed-5381-49e9-9e6e-268aae6d3dcf.png)
+
+## Glimpse for some function to get data from database
+![image](https://user-images.githubusercontent.com/100035961/227988333-58eefc7a-da97-409e-b8af-0c91a52ec63d.png)
 
 # Thanking you for your time to see my project.
