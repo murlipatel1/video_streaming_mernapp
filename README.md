@@ -48,5 +48,8 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 ## Added Comments
 ![Screenshot 2023-03-11 180156](https://user-images.githubusercontent.com/100035961/224484777-62bf57bc-a1a1-465c-91a9-3baede8115ce.png)
 
+## You can now follow your own creators
+![image](https://user-images.githubusercontent.com/100035961/227815296-b4594e9a-c5ac-4d71-b516-259a8aaa487b.png)
+
 
 # Thanking you for your time to see my project.
