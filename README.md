@@ -1,4 +1,4 @@
-# CiperSchool Assignment
+# Video Streaming Mern App
 
 ## The MERN stack implemented app include basic functionalities
 
